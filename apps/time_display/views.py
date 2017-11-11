@@ -1,9 +1,12 @@
 from django.shortcuts import render, HttpResponse, redirect
 from time import gmtime, strftime, strptime, localtime
+from datetime import datetime
 
 def index(request):
     context = {
-        "time": strftime('%b %d %Y %I:%M%p', localtime())
+        "time": datetime.now()
+        
+        #strftime('%b %d %Y %I:%M%p', localtime())
         
         #("%Y-%m-%d %H:%M %p", gmtime())
     }
